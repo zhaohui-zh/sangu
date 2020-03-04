@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
+ * 双选会公司dto
  * Created by zhaohui on 2020/3/4
  */
 @Getter

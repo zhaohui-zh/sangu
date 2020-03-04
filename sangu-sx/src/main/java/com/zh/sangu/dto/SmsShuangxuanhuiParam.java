@@ -7,6 +7,7 @@ import lombok.Setter;
 import java.util.Date;
 
 /**
+ * 双选会dto
  * Created by zhaohui on 2020/3/3
  */
 @Getter

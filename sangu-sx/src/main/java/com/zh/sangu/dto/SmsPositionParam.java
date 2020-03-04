@@ -7,6 +7,7 @@ import lombok.Setter;
 import java.math.BigDecimal;
 
 /**
+ * 双选会职位dto
  * Created by zhaohui on 2020/3/4
  */
 @Getter
