@@ -37,7 +37,7 @@ public class SmsApplicationController {
         return CommonResult.success(application);
     }
 
-    @ApiOperation("根据用户id获取报名的")
+    @ApiOperation("根据用户id获取报名的双选会")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<CommonPage<SmsApplication>> list(@RequestParam(value = "userId", required = true) Integer id,
