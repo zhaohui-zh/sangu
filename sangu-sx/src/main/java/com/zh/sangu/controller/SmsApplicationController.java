@@ -19,6 +19,7 @@ import java.util.List;
  * Created by zhaohui on 2020/3/4
  */
 @Controller
+@CrossOrigin
 @Api(tags = "SmsApplicationController", description = "双选会报名管理")
 @RequestMapping("/smsApplication")
 public class SmsApplicationController {

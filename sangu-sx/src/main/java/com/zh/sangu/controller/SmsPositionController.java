@@ -18,6 +18,7 @@ import java.util.List;
  * Created by zhaohui on 2020/3/4
  */
 @Controller
+@CrossOrigin
 @Api(tags = "SmsPositionController", description = "双选会岗位管理")
 @RequestMapping("/smsPosition")
 public class SmsPositionController {

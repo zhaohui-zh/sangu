@@ -18,6 +18,7 @@ import java.util.List;
  * Created by zhaohui on 2020/3/3
  */
 @Controller
+@CrossOrigin
 @Api(tags = "SmsShuangxuanhuiController", description = "双选会管理")
 @RequestMapping("/smsShuangxuanhui")
 public class SmsShuangxuanhuiController {
