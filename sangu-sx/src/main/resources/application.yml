@@ -5,8 +5,6 @@ spring:
     multipart:
       enabled: true #开启文件上传
       max-file-size: 10MB #限制文件上传大小为10M
-  jackson:
-    time-zone: GMT+8 #设置时区
 
 server:
   port: 8087
