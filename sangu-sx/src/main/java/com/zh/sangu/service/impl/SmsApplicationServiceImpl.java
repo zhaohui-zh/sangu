@@ -37,7 +37,7 @@ public class SmsApplicationServiceImpl implements SmsApplicationService {
         int capacity = sxh.getCapacity();
         int applyNumber = sxh.getApplyNumber();
         //如果容量已满
-        if (applyNumber > capacity) {
+        if (applyNumber >= capacity) {
             return null;
         }
         //容量未满 申请人数加一
