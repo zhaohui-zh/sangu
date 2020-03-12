@@ -3,7 +3,7 @@
 <mapper namespace="com.zh.sangu.mapper.SmsApplicationMapper">
   <resultMap id="BaseResultMap" type="com.zh.sangu.model.SmsApplication">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
     <result column="sxh_id" jdbcType="INTEGER" property="sxhId" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
@@ -104,7 +104,7 @@
     </selectKey>
     insert into sms_application (user_id, sxh_id, create_time
       )
-    values (#{userId,jdbcType=INTEGER}, #{sxhId,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}
+    values (#{userId,jdbcType=BIGINT}, #{sxhId,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.zh.sangu.model.SmsApplication">
@@ -125,7 +125,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="userId != null">
-        #{userId,jdbcType=INTEGER},
+        #{userId,jdbcType=BIGINT},
       </if>
       <if test="sxhId != null">
         #{sxhId,jdbcType=INTEGER},
@@ -148,7 +148,7 @@
         id = #{record.id,jdbcType=INTEGER},
       </if>
       <if test="record.userId != null">
-        user_id = #{record.userId,jdbcType=INTEGER},
+        user_id = #{record.userId,jdbcType=BIGINT},
       </if>
       <if test="record.sxhId != null">
         sxh_id = #{record.sxhId,jdbcType=INTEGER},
@@ -164,7 +164,7 @@
   <update id="updateByExample" parameterType="map">
     update sms_application
     set id = #{record.id,jdbcType=INTEGER},
-      user_id = #{record.userId,jdbcType=INTEGER},
+      user_id = #{record.userId,jdbcType=BIGINT},
       sxh_id = #{record.sxhId,jdbcType=INTEGER},
       create_time = #{record.createTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
@@ -175,7 +175,7 @@
     update sms_application
     <set>
       <if test="userId != null">
-        user_id = #{userId,jdbcType=INTEGER},
+        user_id = #{userId,jdbcType=BIGINT},
       </if>
       <if test="sxhId != null">
         sxh_id = #{sxhId,jdbcType=INTEGER},
@@ -188,7 +188,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.zh.sangu.model.SmsApplication">
     update sms_application
-    set user_id = #{userId,jdbcType=INTEGER},
+    set user_id = #{userId,jdbcType=BIGINT},
       sxh_id = #{sxhId,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}

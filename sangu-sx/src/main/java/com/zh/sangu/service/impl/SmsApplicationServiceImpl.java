@@ -54,7 +54,7 @@ public class SmsApplicationServiceImpl implements SmsApplicationService {
     }
 
     @Override
-    public List<SmsApplication> list(Integer userId, Integer pageSize, Integer pageNum) {
+    public List<SmsApplication> list(Long userId, Integer pageSize, Integer pageNum) {
         PageHelper.startPage(pageNum, pageSize);
         SmsApplicationExample example = new SmsApplicationExample();
         example.createCriteria().andUserIdEqualTo(userId);

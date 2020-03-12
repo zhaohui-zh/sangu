@@ -13,7 +13,7 @@ import lombok.Setter;
 public class SmsApplicationParam {
 
     @ApiModelProperty(value = "用户id")
-    private Integer userId;
+    private Long userId;
 
     @ApiModelProperty(value = "双选会id")
     private Integer sxhId;

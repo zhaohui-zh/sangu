@@ -25,6 +25,6 @@ public interface SmsApplicationService {
      * @param pageSize
      * @return
      */
-    List<SmsApplication> list(Integer userId, Integer pageNum, Integer pageSize);
+    List<SmsApplication> list(Long userId, Integer pageNum, Integer pageSize);
 
 }

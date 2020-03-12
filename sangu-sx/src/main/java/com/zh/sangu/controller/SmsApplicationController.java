@@ -33,7 +33,7 @@ public class SmsApplicationController {
     public CommonResult<SmsApplication> apply(@RequestBody SmsApplicationParam param) {
         SmsApplication application = applicationService.apply(param);
         if (application == null) {
-            return CommonResult.failed();
+            return CommonResult.failed("报名人数已满");
         }
         return CommonResult.success(application);
     }
@@ -41,7 +41,7 @@ public class SmsApplicationController {
     @ApiOperation("根据用户id获取报名的双选会")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
-    public CommonResult<CommonPage<SmsApplication>> list(@RequestParam(value = "userId", required = true) Integer id,
+    public CommonResult<CommonPage<SmsApplication>> list(@RequestParam(value = "userId", required = true) Long id,
                                                          @RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
                                                          @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum) {
         List<SmsApplication> applicationList = applicationService.list(id, pageSize, pageNum);
