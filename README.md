@@ -5,3 +5,5 @@
 2. sangu-mbg 使用mbg生成model和mapper；
 3. sangu-sx 三顾招聘双选会后台.
 
+测试修改20200312
+
