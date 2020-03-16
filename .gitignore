@@ -21,3 +21,11 @@ x64
 # Python #
 __pycache__
 *.pyc
+
+# node #
+.DS_Store
+node_modules/
+/dist/
+
+# Local files #
+generatorLocal.properties
