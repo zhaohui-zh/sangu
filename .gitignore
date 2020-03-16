@@ -28,4 +28,5 @@ node_modules/
 /dist/
 
 # Local files #
+application-local.yml
 generatorLocal.properties

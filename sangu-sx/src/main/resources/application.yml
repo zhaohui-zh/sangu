@@ -1,6 +1,8 @@
 spring:
   profiles:
-    active: dev #默认为开发环境
+    active: local #默认为本地环境
+    #引入其他配置yml配置文件，名称分别为application-email,application-database
+    #include: email,database
   servlet:
     multipart:
       enabled: true #开启文件上传
